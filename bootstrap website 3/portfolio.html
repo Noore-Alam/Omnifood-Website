@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+             background-image: url(pro.jpg);
+             background-repeat: no-repeat;
+             background-size: cover;
+             position: relative;
+             overflow-y: auto;
+        }
+
+        .nav{
+            width: 350px;
+            height: auto;
+           
+            position: absolute;
+            top: 20%;
+            left: 0;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 28px;
+            font-family: vardana;
+            font-weight: bold;
+            height: 90px;
+            margin: 5px 0;
+            float: left;
+            display: inline-block;
+            background: #000;
+            line-height: 90px;
+            text-align: center;
+            transition: 300ms;
+            color: #fff;
+        }
+
+        a.active, .nav a:hover{
+            background: #fff;
+            color: #000;
+            width: 100%;
+        }
+
+        a.active {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .a {
+            width: 95%;
+        }
+        .b {
+            width: 85%;
+        }
+        .c {
+            width: 80%;
+        }
+
+        .d {
+            width: 90%;
+        }
+
+        .contant {
+            position: absolute;
+            width: 930px;
+            min-height: 500px;
+            height: auto;
+           /* background: red;*/
+            right: 0;
+            top: 10%;
+        }
+
+        .home {
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .home h1{
+            font-size: 95px;
+            padding-right: 90px;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+           
+        }
+
+        
+        
+
+        .home h3 {
+            font-size: 28px;
+            padding: 5px 0;
+            opacity: 0.6;
+
+        }
+
+        .aboutus {
+            position: absolute;
+            right: 0;
+            top:10px;
+            color: #fff;
+            font-family: cantury gothic;
+
+        }
+
+         .aboutus p {
+              font-size: 18px;
+              line-height: 28px;
+              margin-bottom: 15px;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT US</a>
+        </div>
+        <div class="contant">
+            <div class="home">
+                <h1>I am Doe</h1>
+                <h3>Graphic Designer</h3>
+            </div>
+            <div class="aboutus">
+                <p>Hello Friends,<br>
+                Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit. Ratione soluta </b><br>suscipit itaque, aut dolorum a quasi<br> ex, iure vitae similique, reiciendis fugit ad obcaecati cupiditate nulla ut architecto blanditiis maiores.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet suscipit culpa, commodi, illum ad nesciunt<br> deserunt est obcaecati doloremque doloribus quaerat, sint, nostrum. Eveniet maiores, iste perferendis veniam placeat esse.</p>
+                <p>Hello Friends,<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione soluta suscipit itaque, aut dolorum a quasi<br> ex, iure vitae similique, reiciendis fugit ad obcaecati cupiditate nulla ut architecto blanditiis maiores.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet suscipit culpa, commodi, illum ad nesciunt<br> deserunt est obcaecati doloremque doloribus quaerat, sint, nostrum. Eveniet maiores, iste perferendis veniam placeat esse.</p>
+            </div>
+        </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $('a').click(function(){
+         // alert("i am click");
+          var selected = &(this);
+          $('a').removeclass('active');
+          $(selected).addclass('active');
+      })
+  })
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#wrapper{
+			font-family: tahoma;
+		}
+		.container {
+			width: 100%;
+			margin: 0 auto;
+			max-width: 100%;
+			
+		}
+		#subheader {
+			width: 100%;
+			height: 30px;
+			background-color: #0a930a;
+			color: #fff;
+			margin-top: 7px;
+		}
+
+		#subheader p{
+			float: left;
+			margin-top: 7px;
+		}
+
+		#subheader a{
+			float: right;
+			line-height: 30px;
+			color: #fff;
+            text-decoration:none;
+            margin-left: 30px;
+		}
+
+		/*---logo styling ----*/
+
+		#main-header {
+			width: 100%;
+			height: 100px;
+			background: #1aaa1a;
+			float: left;
+			margin-top: -15px;
+
+		}
+
+		#logo {
+			width: 250px;
+			margin-top: 10px;
+			float: left;
+
+		}
+
+		#ist {
+			color: black;
+			font-size: 45px;
+			font-weight: bold;;
+			margin-left: 15px;
+			font-family: cursive;
+		}
+
+			#list {
+			color: black;
+			font-size: 45px;
+			font-weight: bold;;
+			font-family: cursive;
+		}
+
+		/*------searching area styling ------*/
+
+		#search {
+			width: 650px;
+			float: left;
+			padding: 20px;
+			margin-left: 50px;
+
+		}
+
+		.search-area {
+			width: 600px;
+			height: 50px;
+			background:#fff;
+			border: none;;
+			border-radius: 10px;
+			float:left;
+			padding-left: 15px;
+
+		}
+
+		.search-btn {
+			width: 100px;
+			height: 52px;			
+			border-radius: 10px;
+			border: none;
+			color: #fff;
+			background-color: brown;
+			margin-left: -100px;
+		}
+
+		/*------this for user menu------*/
+
+		#user-menu{
+			width: 300px;
+			float: right;
+			margin-top: 20px;
+		}
+
+		/*------this for list styling------*/
+
+		#user-menu li{
+			float: left;
+			width: 140px;
+			text-align: center;
+			list-style: none;
+			font-size: 25px;
+			border-left: 2px solid black;
+		}
+
+		#user-menu li:hover{
+			font-size: 30px;
+			transition: all .5s ease;
+		}
+
+		#user-menu li a{
+			color: #fff;
+			text-decoration:none;
+
+		}
+      /*------navigation------*/
+		#navigation{
+			width: 100%;
+			height: 35px;
+			background-color: #1aaa1a;
+			float: left;
+			box-shadow: 10px 14px 50px 2px #1aaa1a;
+		}
+		nav {
+			width: 1280px;
+			margin: 0 auto;
+		}
+
+		nav a {
+			margin-left: 35px;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		nav a:hover{
+			color: #000;
+			transition: all .7s ease;
+		}
+
+		.slide {
+			width: 100%;
+			height: auto;
+		}
+
+		/*-----category boxex------*/
+
+		#heading-block {
+			width: 100%;
+			height: auto;
+			float: left;
+			color: #1aaa1a;
+			font-size: 22px;
+		}
+
+		#heading-block h2 {
+			line-height: 35px;
+			border-left: 20px solid #1aaa1a;
+			padding-left: 10px;
+
+		}
+
+		/*------category boxes--------*/
+		.catbox {
+			width: 260px;
+			height: 262px;
+			overflow: hidden;
+			float: left;
+			position: relative;
+			margin: 0px 15px 30px 21px;
+
+}
+        .catbox span {
+        	width: 100%;
+        	height: 35px;
+        	line-height: 35px;
+        	background: rgba(0,0,0,.6);
+        	color: white;
+        	display: block;
+        	bottom: 30px;
+        	position: absolute;
+        	z-index: 999;
+        	text-align: center;
+        }
+
+        .catbox:hover span {
+        	color: #1aaa1a;
+        	transform: scale(1.3,1.3);
+        	-webkit-transition: all .8s ease;
+        	
+        }
+        
+        .catbox img {
+        	max-width: 100%;
+        	transition: all 0.5s ease;
+        }
+        .catbox:hover img {
+        	max-width: 100%;
+        	transform: scale(1.3,1.3);
+        	-webkit-transition: all 0.5s ease;
+        }
+
+      /*-------products styling------*/
+
+      .prod-box {
+      	width: 235px;
+      	height: 300px;
+      	overflow: hidden;
+      	margin: 0 2px 30px 56px;
+      	position: relative;
+      	float: left;
+
+      }
+
+      .prod-box>img{
+      	max-width: 100%;
+      }
+
+      .prod-trans{
+      	background: rgba(0,0,0,.6);
+      	width: 100%;
+      	height: 100%;
+      	position: absolute;
+      	top:0;
+      	bottom: 0;
+      	opacity: 0;
+      	transition: all .5s ease;
+      }
+
+      .prod-box:hover .prod-trans {
+      	opacity: 1;
+      	transition: all .5s ease;
+      }
+
+      .prod-feature {
+      	text-align-last: center;
+      	margin-top: -150px;
+      	transition: all .5s ease;
+ 
+      }
+
+      .prod-feature p {
+      	color: #00eb00;
+      	font-family: vardana;
+      }
+
+      .prod-box:hover .prod-feature {
+      	margin-top: 150px;
+      	transition: all .5s ease;
+      }
+
+      .prod-feature input {
+      	width: 150px;
+      	height: 35px;
+      	font-size: 17px;
+      }
+
+      .offer {
+      	width: 420px;
+      	float: left;
+      	margin: 0 15px 0 56px;
+
+      }
+
+      .offer:last-child {
+      	margin-right: 0px;
+      }
+
+       .offer img {
+       	 width: 100%;
+       }
+
+       #footer {
+       	width: 100%;
+       	height: 300px;
+       	background: #f5f5f5;
+       	float: left;
+       }
+
+      .footer-sub {
+      	width: 25%;
+      	float: left;
+
+      }
+
+      .footer-sub2 ul li{
+      	list-style: none;
+      	width: 20%;
+      	margin-top: 0;
+      }
+
+      .footer-sub2 h2{
+      	color: black;
+      	font-size: 10px
+     
+      }
+   .footer-sub3 {
+      	color: black;
+      	font-size: 20px
+      
+
+
+
+
+
+	</style>
+</head>
+<body>
+   <div id="wrapper">
+   	<div id="header">
+   		<div id="subheader">
+   			<div class="container">
+   				<p>World fastest online shopping place</p>
+   				<a href="#">Gust</a>
+   				<a href="#">Cusumer</a>
+   				<a href="#">Downlode App</a>
+   				<a href="#">Help</a>
+   			</div>
+   		</div>
+   	</div>
+   </div>
+
+   <!----- main header ---->
+   <div id="main-header">
+   	<!-----logo------>
+   	<div id="logo">
+   		<span id="ist">My</span><span id="list">shop.com</span>
+   	</div>
+   	<div id="search">
+   		<form action="">
+   			<input class="search-area" type="text" name="text" placeholder="Search here">
+   			<input class="search-btn" type="submit" name="submit" value="SEARCH">
+   		</form>
+   	</div>
+   	<!-----user-menu------->
+   	<div id="user-menu">
+   		<li><a href="#">Cart</a></li>
+   		<li><a href="#">Login</a></li>
+   	</div>
+   
+  <!------navigation------>
+  <div id="navigation">
+  	<nav>
+  		<a href="#">Home</a>
+  		<a href="#">New arrivals</a>
+  		<a href="#">Deals</a>
+  		<a href="#">Electronics</a>
+  		<a href="#">Products</a>
+  		<a href="#">Oder</a>
+
+  	</nav>
+  </div>
+  <!----home-slider----->
+  <div id="slider">
+  	<img src="img.png." class="slide">
+  </div>
+
+  <!-----category boxex------>
+  <div class="container">
+  <div id="heading-block">
+  	<h2>Category</h2>
+  </div>
+  <a href="#">
+ <div class="catbox">
+ 	<img src="m.png">
+ 	<span>Men Fashion</span>
+ </div>
+</a>
+
+   <a href="#">
+ <div class="catbox">
+ 	<img src="c1.png">
+ 	<span>Woman Fashion</span>
+ </div></a>
+
+   <a href="#">
+ <div class="catbox">
+ 	<img src="c2.png">
+ 	<span>Hand Bags</span>
+ </div>
+</a>
+
+   <a href="#">
+ <div class="catbox">
+ 	<img src="c3.png">
+ 	<span>Earing</span>
+ </div></a>
+
+   <a href="#">
+ <div class="catbox">
+ 	<img src="c4.png">
+ 	<span>Ledies Fashion</span>
+ </div></a>
+
+ <!-------heading of category-------->
+  <div id="heading-block">
+  	<h2>Products</h2>
+  </div>
+  <div class="prod-container">
+
+  	<!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d1.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Woman Tshart</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---2 prodocut----->
+  	<div class="prod-box">
+  		<img src="d2.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Ladies Fashion</p>
+  		<p style="color:#fff; font-weight: bold;">price : $39</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d3.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Pc Teknology</p>
+  		<p style="color:#fff; font-weight: bold;">price : $300</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d4.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Shopping Charge</p>
+  		<p style="color:#fff; font-weight: bold;">price : $50</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d5.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Leadies products</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d1.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>All Type Products</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d2.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Man special suit</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d3.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Man special suit</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d4.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Man special suit</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  <!---first prodocut----->
+  	<div class="prod-box">
+  		<img src="d5.png">
+  		<div class="prod-trans">
+  		<div class="prod-feature">	
+  		<p>Man special suit</p>
+  		<p style="color:#fff; font-weight: bold;">price : $100</p>
+  		<input type="button" value="Add to card">	
+  		</div>
+  	</div>
+  </div>
+  </div>
+  <div class="containear">
+  	<div id="heading-block">
+  		<h2>Offer</h2>
+  	</div>
+  	<!----offer boxer--->
+  	<div class="offer">
+  		<a href="#"><img src="c1.png"></a>
+  	</div>
+  	<div class="offer">
+  		<a href="#"><img src="c1.png"></a>
+  	</div>
+  	<div class="offer">
+  		<a href="#"><img src="c1.png"></a>
+  	</div>
+  </div>
+  </div>
+  <div id="footer">
+  	<div class="container">
+  		<div class="footer-sub">
+  			<h2>Our Story</h2>
+  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad a iste cum. Nam necessitatibus nostrum numquam, modi quod, nobis non, distinctio ad suscipit minima sit minus totam similique nihil facilis.<span><a href="">Click more</a></span></p>
+  		</div>
+  		<div class="footer-sub2">
+  		<center>
+  		<h2 class="imp">Importent links</h2>
+  		<ul>
+  			<li><a href="">Home</a></li>
+  			<li><a href="">New arrivals</a></li>
+  			<li><a href="">Deals</a></li>
+  			<li><a href="">Electronics</a></li>
+  			<li><a href="">Accessories</a></li>
+  			<li><a href="">Products</a></li>
+  			<li><a href="">Oder</a></li>
+  		</ul>
+        </center></div>
+  		<div class="footer-sub3">
+  			<h2 class="imp">Importent links</h2>
+  		<ul>
+  			<li><a href="">Home</a></li>
+  			<li><a href="">New arrivals</a></li>
+  			<li><a href="">Deals</a></li>
+  			<li><a href="">Electronics</a></li>
+  			<li><a href="">Accessories</a></li>
+  			<li><a href="">Products</a></li>
+  			<li><a href="">Oder</a></li>
+  		</ul>
+  		</div>
+  		<div class="footer-sub4"></div>
+  		
+  	</div>
+  </div>
+  </div>
+</body>
+</html>
