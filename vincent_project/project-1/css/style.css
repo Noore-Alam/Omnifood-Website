@@ -1,0 +1,326 @@
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+.site-header {
+    background: transparent;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.site-header .site-logo,
+.site-header .site-logo a {
+    display: inline-block;
+}
+
+.main-nav,
+.header_form {
+    float: right;
+}
+
+.site-header .menu > li,
+.site-header .h_form_nav > li {
+    display: inline-block;
+}
+
+.site-header .menu > li > a,
+.site-header .h_form_nav > li > a {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.site-header .menu > li > a:hover,
+.site-header .h_form_nav > li > a:hover {
+    text-decoration: none;
+}
+
+.site-header .menu > li:not(:last-child),
+.site-header .h_form_nav > li:not(:last-child) {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.site-header .header_form {
+    margin-left: 20px;
+}
+
+.site-header .menu > li > a:after,
+.site-header .h_form_nav > li > a:after {
+    content: "";
+    background-color: #06d4c9;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    width: 0;
+    height: 3px;
+    transform: translateX(-50%);
+    transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -webkit-transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -ms-transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+
+.site-header .menu > li > a:hover:after,
+.site-header .h_form_nav > li > a:hover:after {
+    background-color: #06d4c9;
+    opacity: 1;
+    width: 18px;
+}
+
+
+
+.banner_wrapper {
+    background-image: url(../img/slider_bg2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.banner_wrapper .banner_content {
+    font-family: 'Playfair Display', serif;
+    padding-top: 320px;
+    padding-bottom: 340px;
+    display: inline-block;
+}
+
+.banner_content .text-italic {
+    font-style: italic;
+}
+
+.banner_content h1 {
+    color: rgb(51, 61, 71);
+    white-space: nowrap;
+    font-size: 46px;
+    line-height: 66px;
+    font-weight: 700;
+}
+
+.banner_image_wrapper .banner_1st_img
+.banner_image_wrapper .banner_2sd_img, {
+    position: absolute;
+    top: 70px;
+}
+
+.banner_image_wrapper .banner_1st_img {
+    z-index: 1;
+}
+
+.banner_image_wrapper .banner_1st_img img {
+    position: absolute;
+    top: 0%;
+    height: 880px;
+    right: -270px;
+}
+
+.banner_image_wrapper .banner_2sd_img {
+    z-index: 2;
+    position: absolute;
+    top: 215px;
+    height: 410px;
+    right: 360px;
+}
+
+.banner_image_wrapper .banner_2sd_img img {
+    height: 600px;
+}
+
+.scroll-target {
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-15px);
+    -webkit-transform: translateX(-15px);
+    -moz-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    -o-transform: translateX(-15px);
+}
+
+.scroll-target a {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 40px;
+}
+
+.scroll-target a span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rev-ani-mouse 1.7s linear infinite;
+}
+
+.scroll-target a:hover {
+    text-decoration: none;
+}
+
+
+@keyframes rev-ani-mouse {
+    0% {
+        opacity: 1;
+        top: 0%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 0%;
+    }
+}
+
+/* about */
+.first-section {
+    padding: 220px 0;
+    background-image: url(../img/section_bg1-1.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0 !important;
+}
+
+/* form_main_wrap */
+.form_main_wrap {
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 20px 40px 0px rgba(92,95,101,0.15) !important;
+    border-style: solid;
+    border-color: transparent;
+    z-index: 1;
+    position: relative;
+    transition: all ease-out .2s;
+    text-align: center;
+    padding: 110px 250px 20px 250px;
+    font-family: 'Playfair Display', serif;
+}
+
+.heading {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form_main_wrap .heading {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form_wrap_box {
+    border-width: 1px;
+    border-radius: 52px;
+    padding: 1px;
+    height: 52px;
+    line-height: 52px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d4d4d5;
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    -ms-border-radius: 52px;
+    -o-border-radius: 52px;
+}
+
+.form_control {
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d4d4d5;
+    font-size: 16px;
+    text-shadow: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    font-family: 'Rubik', sans-serif;
+    outline: none;
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.btn {
+    background-color: #06d4c9;
+    border-radius: 50px;
+    padding: 0 30px;
+    height: 50px;
+    line-height: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+    transition: all ease 0.3s;
+}
+
+.btn:hover {
+    background-color: #333d47;
+}
+
+.form_wrap_box .form_control {
+    border: none;
+    width: calc(100% - 140px);
+    float: left;
+    border-radius: 50px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.form_wrap_box .btn {
+    height: 48px;
+    line-height: 48px;
+    float: right;
+}
+
+.subheading {
+    color: #888;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.form_content_wrap .subheading {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.wpb_single_image img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
