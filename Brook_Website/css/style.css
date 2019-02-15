@@ -306,7 +306,7 @@ color: #222;
 }
 
 .right_side {
-    background-image: url(../img/home-start-ups-image-03.jpg);
+    background-image: linear-gradient(to bottom right,rgba(29,65,227,.8),rgba(29, 65, 227,.8)),url(../img/home-start-ups-image-03.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 100%;
